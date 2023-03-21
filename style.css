@@ -1,0 +1,151 @@
+/* Resets */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+/* https://piccalil.li/blog/a-modern-css-reset/ */
+
+body,
+h1,
+p {
+  margin: 0;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+body {
+  display: grid;
+  place-items: center;
+  min-height: 100vh;
+}
+
+/* Custum Properly */
+:root {
+  --bg-clr-body: hsl(217, 54%, 11%);
+  --bg-clr-card: hsl(216, 50%, 16%);
+  
+  --clr-white: hsl(0, 0%, 100%);
+  --clr-text: hsl(215, 51%, 70%);
+  --clr-line: hsl(215, 32%, 27%);
+  --clr-accent: hsl(178, 100%, 50%);
+  
+  --fs-text: 1.4rem;
+  
+  --fw-lite: 300;
+  --fw-regular: 400;
+  --fw-semi-bold: 600;
+}
+
+/* Typography */
+body {
+  font-family: 'Outfit', sans-serif;
+  color: var(--clr-text);
+  font-size: var(--fs-text);
+}
+
+h1 {
+  color: var(--clr-white);
+}
+
+/* Utility Classes */
+.flex {
+  display: flex;
+  align-items: center;
+  flex-gap: 1rem;
+}
+
+.container {
+ max-width: 60em;
+ padding: 0 auto;
+ margin: 0 auto;
+}
+
+.border-radius {
+  border-radius: 10px;
+}
+
+/* Card */
+.card {
+  background-color: var(--bg-clr-card);
+  padding: 2rem;
+  width: 30rem;
+  height: 50rem;
+}
+
+.img-container {
+    position: relative;
+}
+
+.img-container::before {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-position: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.img-container:hover::before {
+    background-image: url(../images/icon-view.svg);
+    cursor: pointer;
+    background-color: hsl(178, 100%, 50%, 0.5);
+    border-radius: 4%;
+}
+
+
+.heading {
+  padding: 2rem 0;
+}
+
+.heading:hover {
+  color: var(--clr-accent);
+}
+
+.payment-deadline {
+  padding: 2rem 0 0 0;
+  justify-content: space-between;
+}
+
+hr {
+  border: 0.8px solid var(--clr-line);
+}
+
+.line-container {
+  padding: 1rem 0;
+}
+
+.price,
+.day {
+  gap: 0.5rem;
+}
+
+.price span {
+  color: var(--clr-accent);
+}
+
+.avator {
+  width: 3rem;
+  border: 1.5px solid var(--clr-white);
+  border-radius: 50%;
+}
+
+.name {
+  color: var(--clr-white);
+}
+
+.name:hover {
+  color: var(--clr-accent);
+}
