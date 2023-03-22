@@ -47,6 +47,7 @@ body {
 
 /* Typography */
 body {
+  background-color: var(--bg-clr-body);
   font-family: 'Outfit', sans-serif;
   color: var(--clr-text);
   font-size: var(--fs-text);
